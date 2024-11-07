@@ -119,16 +119,18 @@ form {
   cursor: pointer;
   font-weight: bold;
   color: var(--jordiBlue);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
-.tab-container label:hover {
+/* Hover effect and active state for tab labels */
+.tab-container label:hover,
+#login-tab:checked ~ .form-section .tab-container .login-label,
+#signup-tab:checked ~ .form-section .tab-container .signup-label {
   filter: drop-shadow(0rem 0rem 0.5rem var(--moonRaker));
   color: var(--moonRaker);
-  transition: 0.5s;
 }
 
-/* Hidden Radio Buttons */
+/* Hidden radio buttons */
 input[type="radio"] {
   display: none;
 }
@@ -171,7 +173,7 @@ button:hover {
   transition: 0.7s ease;
 }
 
-/* Animations for Tab Changes */
+/* Animations for tab switching */
 #login-tab:checked ~ .login-image {
   left: 50%;
 }
@@ -202,15 +204,4 @@ button:hover {
 
 #signup-tab:checked ~ .signup-section {
   left: 50%;
-}
-
-/* Active Tab Styling */
-#login-tab:checked ~ .tab-container .login-label {
-  color: #4CAF50;
-  border-bottom: 2px solid #4CAF50;
-}
-
-#signup-tab:checked ~ .tab-container .signup-label {
-  color: #4CAF50;
-  border-bottom: 2px solid #4CAF50;
 }
