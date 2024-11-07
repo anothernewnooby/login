@@ -1,0 +1,169 @@
+:root{
+    --backgroundColor: #110944;
+    --blueViolet: #5443BF;
+    --moonRaker: #DBD7F9;
+    --jordiBlue: #8DBAF3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--moonRaker);
+}
+
+.container{
+    display: flex;
+    background: var(--backgroundColor);
+    border-radius: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    width: 120rem;
+    height: 80rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.side-image{
+    width: 50%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--moonRaker);
+    transition: all 0.7s ease-in-out;
+    position: absolute;
+
+}
+
+.login-image,
+.signup-image{
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--blueViolet));
+}
+
+.login-image{
+    left: 0;
+}
+
+.signup-image{
+    left: 50%;
+}
+
+.side-image h2{
+    font-size: 2.5rem;
+}
+.side-image p{
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.form-section{
+    width: 50%;
+    padding: 4rem;
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+}
+
+.login-section{
+    left: 50%;
+}
+
+.signup-section {
+    left: 0;
+}
+
+.tab-container{
+    margin-bottom: 3rem;
+}
+
+.tab-container label{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--jordiBlue);
+    transition: all 0.5s ease;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.form-group{
+    margin-bottom: 2rem;
+}
+
+.form-group input:focus{
+    border-color: var(--blueViolet);
+}
+
+button{
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--moonRaker);
+    color: var(--backgroundColor);
+    border: none;
+    border: 0.5rem;
+    cursor: pointer;
+    font: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+  }
+
+  /* Animaciones para el cambio de pestañas */
+  #login-tab:checked ~ .login-image {
+    left: 50%;
+  }
+
+  #login-tab:checked ~ .signup-image {
+    left: 100%;
+  }
+
+  #login-tab:checked ~ .login-section {
+    left: 0;
+  }
+
+  #login-tab:checked ~ .signup-section {
+    left: -50%;
+  }
+
+  #signup-tab:checked ~ .login-image {
+    left: -50%;
+  }
+
+  #signup-tab:checked ~ .signup-image {
+    left: 0;
+  }
+
+  #signup-tab:checked ~ .login-section {
+    left: 100%;
+  }
+
+  #signup-tab:checked ~ .signup-section {
+    left: 50%;
+  }
+
+  #login-tab:checked ~ .tab-container .login-label {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+  }
+
+  #signup-tab:checked ~ .tab-container .signup-label {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+  }

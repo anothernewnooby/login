@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+  <body>
+    <div class="container">
+      <input type="radio" id="login-tab" name="tabs" checked>
+      <input type="radio" id="signup-tab" name="tabs">
+
+      <!-- Image section -->
+      <div class="side-image login-image">
+        <h2>Welcome back, Explorer</h2>
+        <p>We're glad to see you again. Log in to continue your journey with us.</p>
+        <img src="https://i.ibb.co/L9dnNrX/astro1.png" alt="astro1" border="0">
+      </div>
+      
+      <div class="side-image signup-image">
+        <h2>Come and Explore!</h2>
+        <p>Start your adventure today. Create an account and discover everything we have for you.</p>
+        <img src="https://i.ibb.co/9vG1sxY/astro2.png" alt="astro2" border="0">
+      </div>
+
+      <!-- Form section -->
+      <div class="form-section login-section">
+        <div class="tab-container">
+          <label for="login-tab" class="login-label">Log In</label>
+          <label for="signup-tab" class="signup-label">Sign Up</label>
+        </div>
+        <form>
+          <div class="form-group">
+            <input class="input-date" type="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input class="input-date" type="password" placeholder="Password" required>
+          </div>
+          <button type="submit">Log In</button>
+        </form>
+      </div>
+
+      <div class="form-section signup-section">
+        <div class="tab-container">
+          <label for="login-tab" class="login-label">Log In</label>
+          <label for="signup-tab" class="signup-label">Sign Up</label>
+        </div>
+        <form>
+          <div class="form-group">
+            <input class="input-date" type="text" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <input class="input-date" type="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input class="input-date" type="password" placeholder="Password" required>
+          </div>
+          <div class="form-group">
+            <input class="input-date" type="password" placeholder="Repeat Password" required>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
